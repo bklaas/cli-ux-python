@@ -1,5 +1,15 @@
 """Generic cli UX classes for a richer console-driven experience."""
 import time
+from .methods import *
+
+
+class CliUx(object):
+    """Collection class for cliux stuff, and things."""
+
+    def __init__(self):
+        self.pbar = pbar
+        self.traceback_on = traceback_on
+        self.traceback_off = traceback_off
 
 
 class FeedbackTimer(object):
