@@ -10,6 +10,14 @@ class CliUx(object):
         self.pbar = pbar
         self.traceback_on = traceback_on
         self.traceback_off = traceback_off
+        self.redprint = redprint
+        self.blackprint = blackprint
+        self.greenprint = greenprint
+        self.yellowprint = yelllowprint
+        self.blueprint = blueprint
+        self.cyanprint = cyanprint
+        self.whiteprint = whiteprint
+        self.magentaprint = magentaprint
 
 
 class FeedbackTimer(object):
