@@ -1,10 +1,9 @@
-"""Generic cli UX methods and classes for a richer console-driven experience."""
-#import glob
-#from pathlib import Path
+"""Generic cli UX methods for a richer console-driven experience."""
+# import glob
+# from pathlib import Path
 
 from tqdm import tqdm
 
-#from .__about__ import VERSION, MAJOR_VERSION
 
 def pbar(iterable, **kwargs):
     """Wrapper on tqdm progress bar to give sensible defaults.
@@ -25,18 +24,3 @@ def pbar(iterable, **kwargs):
         if k not in kwargs:
             kwargs[k] = defaults[k]
     return tqdm(iterable, **kwargs)
-
-
-class FeedbackTimer(object):
-    """Simple class to provide feedback to user, with time elapsed to run task."""
-    def __init__(self, msg=None):
-        if msg:
-            self.start(msg)
-    def done(self):
-        elapsed = str(int(time.time() - self.start_time))
-        print(f"DONE ({elapsed}s)", flush=True)
-
-    def start(self, msg):
-        self.start_time = time.time()
-        print(msg, end="...", flush=True)
-
